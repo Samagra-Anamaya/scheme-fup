@@ -1,0 +1,33 @@
+-- CreateTable
+CREATE TABLE "scheme_transaction" (
+    "id" SERIAL NOT NULL,
+    "schemeCode" TEXT,
+    "schemeName" TEXT,
+    "department" TEXT,
+    "domain" TEXT,
+    "facilitatortype" TEXT,
+    "financialYear" TEXT,
+    "geolocation" JSONB,
+    "projectCost" INTEGER,
+    "applicationID" TEXT,
+    "groupName" TEXT,
+    "facilitatorname" TEXT,
+    "amountSanctioned" INTEGER,
+    "commodityType" TEXT,
+    "commodityVariety" TEXT,
+    "aadhaarReferenceNumber" TEXT,
+    "beneficiaryName" TEXT,
+    "uniqueBeneficiaryID" TEXT,
+    "clusterID" TEXT,
+    "transactionType" TEXT,
+    "transactionAmount" INTEGER,
+    "transactionQuantity" INTEGER,
+    "transactionCommodity" TEXT,
+    "transactionUnit" TEXT,
+    "transactionPercentage" TEXT,
+    "transactionDate" TEXT,
+    "transactionNumber" TEXT,
+    "remarks" TEXT,
+
+    CONSTRAINT "scheme_transaction_pkey" PRIMARY KEY ("id")
+);
