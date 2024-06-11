@@ -24,7 +24,7 @@ POSTGRES_DB='postgres_db'
 ```
 Run this command to start `fusionauth`.
 ```sh
-docker compose up -d db search fusionauth
+docker-compose up -d db search fusionauth
 ```
 
 ## Setup fusionauth & user-service
@@ -37,7 +37,7 @@ APP_6f546091_1d96_463e_8de2_323f1da7cb98={"host": "http://fusionauth:9011", "api
 ``` 
 And then start the `user-service` by this command
 ```sh
-docker compose up -d web
+docker-compose up -d web
 ```
 This would start `fusionauth` & `user-service` at ports 9011 & 3005 respectively
 
@@ -58,9 +58,9 @@ JWKS_URI="http://localhost:9011/.well-known/jwks.json" # replace this with hoste
 ```
 
 ## Start Databases required by scheme-fup service (optional)
-If you want to run database on local machine. Use docker compose to start the database, and update `DATABASE_URL` in .env accordingly.
+If you want to run database on local machine. Use docker-compose to start the database, and update `DATABASE_URL` in .env accordingly.
 ```
-docker compose up -d postgres
+docker-compose up -d postgres
 ```
 
 ## Starting scheme-fup service
