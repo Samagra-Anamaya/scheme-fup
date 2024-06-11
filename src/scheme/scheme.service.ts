@@ -94,8 +94,47 @@ export class SchemeService {
                 },
             }),
         ]);
+        const res = savedTransactions.map((transaction) => {
+            return {
+                schemeMetadata: {
+                    schemeCode: transaction.schemeCode,
+                    schemeName: transaction.schemeName,
+                    department: transaction.department,
+                    domain: transaction.domain,
+                    facilitatortype: transaction.facilitatortype,
+                    financialYear: transaction.financialYear,
+                    geolocation: transaction.geolocation
+                },
+                application: {
+                    projectCost: transaction.projectCost,
+                    applicationId: transaction.applicationID,
+                    groupName: transaction.groupName,
+                    facilitatorname: transaction.facilitatorname,
+                    amountSanctioned: transaction.amountSanctioned,
+                    commodityType: transaction.commodityType,
+                    commodityVariety: transaction.commodityVariety
+                },
+                applicant: {
+                    aadhaarReferenceNumber: transaction.aadhaarReferenceNumber,
+                    beneficiaryName: transaction.beneficiaryName,
+                    uniqueBeneficiaryId: transaction.uniqueBeneficiaryID,
+                    clusterId: transaction.clusterID
+                },
+                transaction: {
+                    transactionType: transaction.transactionType,
+                    transactionAmount: transaction.transactionAmount,
+                    transactionQuantity: transaction.transactionQuantity,
+                    transactionCommodity: transaction.transactionCommodity,
+                    transactionUnit: transaction.transactionUnit,
+                    transactionPercentage: transaction.transactionPercentage,
+                    transactionDate: transaction.transactionDate,
+                    transactionNumber: transaction.transactionNumber
+                },
+                remarks: transaction.remarks
+            }
+        })
         return {
-            savedTransactions,
+            savedSchemes: res,
             totalCount: total,
             currentPage: page,
             totalPages: Math.ceil(total / pageSize),
