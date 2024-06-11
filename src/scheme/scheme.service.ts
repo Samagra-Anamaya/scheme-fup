@@ -13,7 +13,7 @@ export class SchemeService {
     ) { }
 
     private userServiceBaseUrl = process.env.USER_SERVICE;
-    private steApplicationId = process.env.APPLICATION_ID;
+    private appId = process.env.APPLICATION_ID;
 
     async authenticate(username: string, password: string) {
         let response;
@@ -21,9 +21,10 @@ export class SchemeService {
             response = await axios.post(`${this.userServiceBaseUrl}/api/login`, {
                 password: password,
                 loginId: username,
-                applicationId: this.steApplicationId,
+                applicationId: this.appId,
             });
             if (response.data.responseCode === 'FAILURE') {
+                console.log(response.data)
                 return {
                     status: 'failure',
                     message: response.data.params.err,

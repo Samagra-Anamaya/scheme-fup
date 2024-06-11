@@ -56,9 +56,6 @@ export class AuthGuard implements CanActivate {
                     console.log('JWT verification error:', err);
                     resolve(false);
                 } else {
-                    if (!['department', 'super_admin_department'].find(el => el == decoded['roles'].filter(x => x == el))) {
-                        resolve(false);
-                    }
                     request.headers.userId = decoded.sub;
                     request.headers.username = decoded['preferred_username'];
                     request.headers.roles = decoded['roles'];

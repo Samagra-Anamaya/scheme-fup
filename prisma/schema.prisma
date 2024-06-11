@@ -44,4 +44,6 @@ model scheme_transaction {
   remarks                String?
   userId                 String?
   createdAt              DateTime @default(now())
+
+  @@index([userId])
 }

@@ -64,7 +64,7 @@ export class SchemeMetadata {
     }
   })
   @IsOptional()
-  geolocation: JsonObject;
+  geoLocation: JsonObject;
 }
 
 export class Application{
@@ -81,7 +81,7 @@ export class Application{
     example: 'APC/00374044'
   })
   @IsOptional()
-  applicationID: string;
+  applicationId: string;
   
   @ApiProperty({
     description: 'Name of the group which has applied for a scheme',
@@ -95,7 +95,7 @@ export class Application{
     example: 'PRASANTA KUMAR PRADHAN (RG23KS00002149)'
   })
   @IsOptional()
-  facilitatorname: string;
+  facilitatorName: string;
   
   @ApiProperty({
     description: 'Amount sanctioned for the scheme',
@@ -139,14 +139,14 @@ export class Applicant {
     example: '123412341234'
   })
   @IsOptional()
-  uniqueBeneficiaryID: string;
+  uniqueBeneficiaryId: string;
   
   @ApiProperty({
     description: 'beneficiaries are mapped to clusters for a scheme (RFM)',
     example: 'BALA_PUIN_000001'
   })
   @IsOptional()
-  clusterID: string;
+  clusterId: string;
 }
 
 export class Transaction {
