@@ -75,3 +75,4 @@ yarn start:dev
 ```
 
 This would start your `scheme-fup` service on port 3000.
+Swagger docs can be accessed through `http://localhost:3000/api`
