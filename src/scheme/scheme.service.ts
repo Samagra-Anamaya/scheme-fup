@@ -60,6 +60,7 @@ export class SchemeService {
                 data: flattenSchemeTransaction
             });
         } catch (err) {
+            console.log(err)
             return {
                 error: true,
                 message: err
