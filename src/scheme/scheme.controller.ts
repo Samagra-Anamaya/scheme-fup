@@ -4,6 +4,7 @@ import { AuthDto, SchemeTransactionEventDto } from './dto/scheme.transaction.dto
 import { ApiBearerAuth, ApiBody, ApiOkResponse, ApiOperation, ApiProduces, ApiProperty, ApiQuery, ApiResponse } from '@nestjs/swagger';
 import { Public } from './public.decorator';
 import { AuthGuard } from './auth.guard';
+import { Request } from 'express';
 
 class ResponseType {
   @ApiProperty({
